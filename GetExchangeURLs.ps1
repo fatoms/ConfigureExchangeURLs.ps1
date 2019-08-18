@@ -111,7 +111,7 @@ Process {
             Write-Host " - External: $($EAS.ExternalURL)"
             Write-Host "`r`n"
 
-            $AutoD = Get-ClientAccessServer $i | Select AutoDiscoverServiceInternalUri
+            $AutoD = Get-ClientAccessService $i | Select AutoDiscoverServiceInternalUri
             Write-Host "Autodiscover"
             Write-Host " - Internal SCP: $($AutoD.AutoDiscoverServiceInternalUri)"
             Write-Host "`r`n"
