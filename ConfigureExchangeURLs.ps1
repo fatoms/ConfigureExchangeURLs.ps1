@@ -190,10 +190,10 @@ Process {
 
             Write-Host "Configuring Autodiscover"
             if ($AutodiscoverSCP) {
-                Get-ClientAccessServer $i | Set-ClientAccessServer -AutoDiscoverServiceInternalUri https://$AutodiscoverSCP/Autodiscover/Autodiscover.xml
+                Get-ClientAccessService  $i | Set-ClientAccessService -AutoDiscoverServiceInternalUri https://$AutodiscoverSCP/Autodiscover/Autodiscover.xml
             }
             else {
-                Get-ClientAccessServer $i | Set-ClientAccessServer -AutoDiscoverServiceInternalUri https://$internalurl/Autodiscover/Autodiscover.xml
+                Get-ClientAccessService  $i | Set-ClientAccessService -AutoDiscoverServiceInternalUri https://$internalurl/Autodiscover/Autodiscover.xml
             }
 
 
